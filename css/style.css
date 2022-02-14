@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* CSS Document */
+
+label {color:#FFF;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	}
+	
+.input_feld{
+	margin-left: 5px;
+	margin-right: 20px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	/* width: 110px; */
+	}
+	
+body{background-color:#000;}
+
+#container{
+	width: 960px;
+	height: auto;
+	}
+	
+#header{
+	width: 960px;
+	height: 200px;
+	}	
+	
+#logo{
+	margin-left: 5px;
+	width: 700px;
+	height: 100px;
+	}	
+	
+#titeltext{
+	width: 670px;
+	height: 80px;
+	margin-left: 30px;
+	}
+	
+#textcontainer{
+	margin-top: 50px;
+	width: 930px;
+	height: 400px;
+	margin-left: 30px;
+	}	
+
+.antwort_lable{
+	border: none;
+	margin-right: 10px;
+	background-color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	color: #3F3;
+	width: 300px;
+	}
+	
+.antwort_anzeige{
+	border: none;
+	margin-right: 10px;
+	background-color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	text-align:right;
+	color: #3F3;
+	width: 300px;
+	}
+	
+.antwort_anzeige_planeten{
+	border: none;
+	margin-right: 10px;
+	background-color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	color: #3F3;
+	width: 250px;
+	}	
+	
+.planet_anzeige{
+	border: none;
+	float: right;
+	margin-right: 10px;
+	background-color: #000;
+	font-size: 40px;
+	color: #F00;
+	width: 150px;
+	}	
+	
+.infobox{
+	border: thin #F00 solid;
+	width: 800px
+	}
+	
+.infobox_title{
+	border: none;
+	background-color: #000;
+	color: #FFF;
+	font-size: 24px;
+	font-weight: bold;
+	width: 500px;
+	}
+
+.infobox_lable{
+	border: none;
+	margin-right: 10px;
+	background-color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	color: #FFF;
+	width: 300px;
+	}
+
+#infoboxanzeige{
+	margin-top: 24px;
+}
+
+	
+.infobox_anzeige{
+	border: none;
+	margin-right: 10px;
+	background-color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	color: #FFF;
+	width: 193px;
+	}
+	
+.infobox_anzeige_wert{
+	border: none;
+	margin-right: 10px;
+	background-color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	text-align: right;
+	color: #FFF;
+	width: 180px;
+	}
+		
+.infobox_anzeige_klein{
+	border: none;
+	margin-right: 10px;
+	background-color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	color: #FFF;
+	width: 145px;
+	}	
+
+tabel{
+	margin-bottom: 20px;
+	}
+	
+td{
+	color:#FFF;
+	}
+
+#planetenanzeige{
+	float: right;
+	}
+	
+#planetenbild{
+	float:right;
+}
+
+.planeten{
+	border: thin solid #F00}

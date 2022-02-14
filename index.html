@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>	Altersrechner</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="script/funktionen.js"></script>
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="haeder">
+	<div id="logo"><img src="images/logo_sternwarte.gif" /></div>
+    <div id="titeltext"><img src="images/titel_text.gif" /></div>
+</div>
+
+<div id="textcontainer">
+
+<form name="altersrecnung" >
+	<label>Geburtsdatum:</label>
+    <input class="input_feld" type="date" name="gebdatum" id="gebdatum" value="">
+    <input class="input_feld" type="button" name="berechnen"  value="Ok" onClick="berechne_alter()">
+    <br />
+    <br />
+    <br />
+
+ 	<table>
+    <tr>
+    <td><label class="antwort_lable">Alter auf der Erde:</label></td>
+    <td><input  class="antwort_anzeige" type="text" name="age_in_years" readonly="readonly" /></td>
+    <td><label class="antwort_lable"> Jahre</label></td>
+    </tr>
+    <tr>
+    <td><label class="antwort_lable">oder</label></td>
+	<td><input class="antwort_anzeige" type="text" name="month" readonly="readonly" /></td>
+    <td><label class="antwort_lable"> Monate</label></td>
+    </tr>
+    <tr>
+    <td><label class="antwort_lable">oder</label></td>
+    <td><input class="antwort_anzeige" type="text" name="weeks" readonly="readonly" /></td>
+    <td><label class="antwort_lable"> Wochen</label></td>
+    </tr>
+    <tr>
+    <td><label class="antwort_lable">oder</label></td>
+    <td><input class="antwort_anzeige" type="text" name="days" readonly="readonly" /></td>
+    <td><label class="antwort_lable"> Tage</label></td>
+    </tr>
+    <tr>
+    <td><label class="antwort_lable">oder</label></td>
+    <td><input class="antwort_anzeige" type="text" name="hours" readonly="readonly" /></td>
+    <td><label class="antwort_lable"> Stunden</label></td>
+    </tr>
+    <tr>  
+    <td><label class="antwort_lable">oder</label></td>
+    <td><input class="antwort_anzeige" type="text" name="minutes" readonly="readonly" /></td>
+    <td><label class="antwort_lable"> Minuten</label></td>
+    </tr>
+    <tr>  
+    <td><label class="antwort_lable">oder</label></td>
+    <td><input class="antwort_anzeige" type="text" name="seconds" readonly="readonly" /></td>
+    <td><label class="antwort_lable"> Sekunden</label></td>
+    </tr>  
+    </table>
+</form>
+ <br />
+ <br />
+ <br />
+ <input type="button" name="planeten"  value="Wie ist das Alter auf einem anderen Planeten?" onClick="location.href='planeten.html'"/>
+ <input type="button" name="zert"  value="Zertifikat" onClick="location.href='zertifikat.html'">
+</div>
+
+</div>
+
+<script>
+onload = function()
+{
+    birthday_load();
+    document.getElementById('gebdatum').valueAsDate = birthday;
+}
+</script>
+
+</body>
+</html>

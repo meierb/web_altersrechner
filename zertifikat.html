@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printout</title>
+    <link rel="stylesheet" type="text/css" href="css/zertifikat.css">
+    <script type="text/javascript" src="script/funktionen.js"></script>
+</head>
+
+<body>
+    <div class="printpage">
+        <div class="doc">
+            <img id="logo" src="images/logo_urania.jpeg" >
+            <input type="button" value="drucken" class="noprint" onclick="send_to_printer()">
+            <div class="title">Alters-Rechner Sonnensystem</div>
+            <div class="text">Du bist am <span id="datBir"></span> geboren.</div>
+            <div class="text">Heute am <span id="datNow"></span> beträgt dein Alter:</div>
+
+            <table id="age">
+                <tr><td id="ageA" ></td><td>Jahre</td><td>oder</td></tr>
+                <tr><td id="ageM" ></td><td>Monate</td><td>oder</td></tr>
+                <tr><td id="ageW" ></td><td>Wochen</td><td>oder</td></tr>
+                <tr><td id="ageD" ></td><td>Tage</td><td>oder</td></tr>
+                <tr><td id="ageH" ></td><td>Stunden</td><td>oder</td></tr>
+                <tr><td id="ageI" ></td><td>Minuten</td><td>oder</td></tr>
+                <tr><td id="ageS" ></td><td>Sekunden</td><td></td></tr>
+            </table>
+
+            <br>
+            <div class="text">Dein Alter wäre heute auf dem Planeten:</div>
+
+            <table id="age_planet">
+                <tr><td>Merkur</td><td id="planMer"></td><td>Jahre</td></tr>
+                <tr><td>Venus</td><td id="planVen"></td><td>Jahre</td></tr>
+                <tr><td>Erde</td><td id="planErd"></td><td>Jahre</td></tr>
+                <tr><td>Mars</td><td id="planMar"></td><td>Jahre</td></tr>
+                <tr><td>Jupiter</td><td id="planJup"></td><td>Jahre</td></tr>
+                <tr><td>Saturn</td><td id="planSat"></td><td>Jahre</td></tr>
+                <tr><td>Uranus</td><td id="planUra"></td><td>Jahre</td></tr>
+                <tr><td>Neptun</td><td id="planNep"></td><td>Jahre</td></tr>
+                <tr><td>Pluto</td><td id="planPlu"></td><td>Jahre</td></tr>
+            </table>
+
+            <br>
+            <div class="footer">
+                Urania-Sternwarte Zürich<br>
+                Uraniastrasse 9<br>
+                8001 Zürich<br>
+                Telefon +41 43 317 16 40<br>
+                info@urania-sternwarte.ch<br>
+                www.urania-sternwarte ch"
+            </div>
+
+            <div class="footer">
+                Öffentliche Führungen:<br>
+                Jeweils Donnerstag, Freitag und Samstag bei jedem Wetter, in
+                deutscher Sprache und für interessierte<br>
+                Kinder ab 9 Jahren geeignet.
+                <table>
+                    <tr>
+                        <td>Winterzeit</td>
+                        <td>20:00 0 21:15 Uhr</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 20px;">Sommerzeit</td>
+                        <td>21:00 - 22:15</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="footer">
+                Kinderführungen:<br>
+                Finden jeweils am ersten Samstag im Monat statt und sind für
+                Kinder ab 6 Jahren (mit Begleitperson)<br>
+                geeignet.
+            </div>
+            
+        </div>
+    </div>
+
+<script>
+    onload = function() { birthday_load(); berechnen_zertifikat(); }
+</script>
+    
+</body>
+</html>

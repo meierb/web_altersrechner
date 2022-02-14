@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetentabelle</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="script/funktionen.js"></script>
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="haeder">
+	
+    <form name="planetenanzeige" id="planetenanzeige">
+     <br />
+     <img src="images/planeten/Sonnensystem.jpg" class="planeten" name="bild"/>	
+     <br />
+     <br />
+    <input class="planet_anzeige" type="text" name="planetname" readonly="readonly" />
+      
+    </form>
+    
+    <div id="logo"><img src="images/logo_sternwarte.gif" /></div>
+    <div id="titeltext"><img src="images/titel_text.gif" /></div>
+</div>
+
+<div id="textcontainer">
+
+<form name="planetenaltersrechnung" >
+	<label>Geburtsdatum:</label>
+    <input class="input_feld" type="date" name="gebdatum" id="gebdatum" value="" >
+	<br /><br />
+    <input type="button" id="2" name="merkur"  value="Merkur" onClick="berechnen_planetenalter(this.id)">
+    <input type="button" id="3" name="venus"  value="Venus" onClick="berechnen_planetenalter(this.id)">
+    <input type="button" id="4" name="Erde"  value="Erde" onClick="berechnen_planetenalter(this.id)">
+    <input type="button" id="5" name="mars"  value="Mars" onClick="berechnen_planetenalter(this.id)">
+    <input type="button" id="6" name="jupiter"  value="Jupiter" onClick="berechnen_planetenalter(this.id)">
+    <input type="button" id="7" name="saturn"  value="Saturn" onClick="berechnen_planetenalter(this.id)">
+    <input type="button" id="8" name="uranus"  value="Uranus" onClick="berechnen_planetenalter(this.id)">
+    <input type="button" id="9" name="neptun"  value="Neptun" onClick="berechnen_planetenalter(this.id)">
+    <input type="button" id="10" name="pluto"  value="Pluto" onClick="berechnen_planetenalter(this.id)">
+	<br /><br />
+ 	<table>
+    <tr>
+    <td><label class="antwort_lable">Alter auf der Erde:</label></td>
+    <td><input class="antwort_anzeige" type="text" name="age_in_years" readonly="readonly" /></td>
+    <td><label class="antwort_lable"> Jahre</label></td>
+    </tr>
+    <tr>
+    <td><input class="antwort_anzeige_planeten" type="text" name="planettitle" readonly="readonly" /></td>
+    <td><input class="antwort_anzeige" type="text" name="planet_age_in_years" readonly="readonly" /></td>
+    <td><label class="antwort_lable"> Jahre</label></td>
+    </tr>
+    <tr>
+    <td><label class="antwort_lable">oder</label></td>
+    <td><input class="antwort_anzeige" type="text" name="planet_age_in_days" readonly="readonly" /></td>
+    <td><label class="antwort_lable">Tage</label></td>
+    </tr>
+    </table>
+    
+    <br />
+    <input type="button" name="pluto"  value="Infobox ein-/ausblenden" onClick="show('infoboxanzeige')">
+    <input type="button" name="pluto"  value="Zurück" onClick="zurueck()">
+    <input type="button" name="zert"  value="Zertifikat" onClick="location.href='zertifikat.html'">
+    <br />
+	
+    <div id="infoboxanzeige" style="display:none;">  
+        <table class="infobox">
+        <tr><td colspan="5"><input class="infobox_title" type="text" name="info_titel" readonly="readonly" /></td></tr>
+        <tr>
+        <td><input class="infobox_anzeige_klein" type="text" name="info_planetday" readonly="readonly" /></td>
+        <td><input class="infobox_anzeige" type="text" name="info_earthday" readonly="readonly" /></td>
+        <td><input class="infobox_anzeige_klein" type="text" name="info_planetyear" readonly="readonly" /></td>
+        <td><input class="infobox_anzeige_wert" type="text" name="info_earthyear" readonly="readonly" /></td>
+        <td><input class="infobox_anzeige" type="text" name="info_earthyear_text" readonly="readonly" /></td>
+        </tr>
+        <tr>
+        <td><label class="infobox_lable">oder</label></td>
+        <td><input class="infobox_anzeige" type="text" name="info_earthhours" readonly="readonly" /></td>
+        <td><label class="infobox_lable">oder</label></td>
+        <td><input class="infobox_anzeige_wert" type="text" name="info_earthdays" readonly="readonly" /></td>
+        <td><input class="infobox_anzeige" type="text" name="info_earthdays_text" readonly="readonly" /></td>
+        </tr>
+        <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><label class="infobox_lable">oder</label></td>
+        <td><input class="infobox_anzeige_wert" type="text" name="info_planetenearthhour" readonly="readonly" /></td>
+        <td><input class="infobox_anzeige" type="text" name="info_planetenearthhour_text" readonly="readonly" /></td>
+        </tr>    
+        <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><label class="infobox_lable">oder</label></td>
+        <td><input class="infobox_anzeige_wert" type="text" name="info_planethour" readonly="readonly" /></td>
+        <td><input class="infobox_anzeige" type="text" name="info_planethour_text" readonly="readonly" /></td>
+        </tr>     
+        </table>
+    </div>
+</form>
+</div>
+
+<script>
+    onload = function()
+    {
+        birthday_load();
+        document.getElementById('gebdatum').valueAsDate = birthday;
+    }
+</script>
+</body>
+</html>
